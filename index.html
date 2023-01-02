@@ -107,7 +107,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <h2>Get The Latest App From App Stores</h2>
-                      <!-- <p>Chain App Dev is an app landing page HTML5 template based on Bootstrap v5.1.3 CSS layout provided by TemplateMo, a great website to download free CSS templates.</p> -->
+                      <p>Hello everyone, this is software.store26. We serve the creation of websites, company profiles, landing pages, and IT consultants. We are here to help make your business work easier quickly, precisely and reliably.</p>
                     </div>
                     <!-- <div class="col-lg-12">
                       <div class="white-button first-button scroll-to-section">
@@ -151,41 +151,41 @@
           <div class="col-lg-3">
             <div class="service-item first-service">
               <div class="icon"></div>
-              <h4>Services 1</h4>
-              <p>Deskripsi 1.</p>
-              <div class="text-button">
+              <h4>Creation of Application</h4>
+              <!-- <p>Deskripsi 1.</p> -->
+              <!-- <div class="text-button">
                 <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-lg-3">
             <div class="service-item second-service">
               <div class="icon"></div>
-              <h4>Services 2</h4>
-              <p>Deskripsi 2.</p>
+              <h4>Company Profile</h4>
+              <!-- <p>Deskripsi 2.</p>
               <div class="text-button">
                 <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-lg-3">
             <div class="service-item third-service">
               <div class="icon"></div>
-              <h4>Service 3</h4>
-              <p>Deskripsi 3.</p>
+              <h4>Landing Pages</h4>
+              <!-- <p>Deskripsi 3.</p>
               <div class="text-button">
                 <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-lg-3">
             <div class="service-item fourth-service">
               <div class="icon"></div>
-              <h4>Service 4</h4>
-              <p>Deskripsi 4.</p>
+              <h4>IT Consultant</h4>
+              <!-- <p>Deskripsi 4.</p>
               <div class="text-button">
                 <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -506,42 +506,20 @@
               <img src="assets/images/heading-line-dec.png" alt="" />
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="pricing-item-pro">
-              <h4>Nama Projects</h4>
-              <div class="icon">
-                <img src="assets/images/pricing-table-01.png" alt="" />
-              </div>
-              <div>Deskripsi Project</div>
-              <div class="border-button">
-                <a href="#">Purchase This Plan Now</a>
-              </div>
+
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #517eee;"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #517eee;"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <div class="col-lg-4">
-            <div class="pricing-item-pro">
-              <h4>Nama Projects</h4>
-              <div class="icon">
-                <img src="assets/images/pricing-table-01.png" alt="" />
-              </div>
-              <div>Deskripsi Project</div>
-              <div class="border-button">
-                <a href="#">Purchase This Plan Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="pricing-item-pro">
-              <h4>Nama Projects</h4>
-              <div class="icon">
-                <img src="assets/images/pricing-table-01.png" alt="" />
-              </div>
-              <div>Deskripsi Project</div>
-              <div class="border-button">
-                <a href="#">Purchase This Plan Now</a>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -620,5 +598,72 @@
     <script src="assets/js/imagesloaded.js"></script>
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+      $(document).ready(() => {
+        const PROJECTS = [
+          {
+            nama: 'Blast WA',
+            image: 'assets/images/blast-wa.png',
+            deskripsi: 'Sistem ini digunakan untuk mengirim WA secara bersamaan ke banyak nomor whatsapp.',
+          },
+          {
+            nama: 'Jasmine Florist',
+            image: 'assets/images/jasmine-florist.png',
+            deskripsi: 'Sistem ini digunakan untuk mengelola data kebun dan hasil panennya, kemudian digunakan juga untuk membuat nota secara otomatis.',
+          },
+          {
+            nama: 'SIBUKLAH',
+            image: 'assets/images/sibuklah.png',
+            deskripsi: 'Sistem ini digunakan untuk mengelola data buku induk sekolah, dimulai dari data siswa, data nilai, dsb.',
+          },
+          {
+            nama: 'SIMASET',
+            image: 'assets/images/simaset.png',
+            deskripsi: 'Sistem ini digunakan untuk mengelola data aset.',
+          },
+          {
+            nama: 'Sistem Keuangan',
+            image: 'assets/images/sistem-keuangan.png',
+            deskripsi: 'Sistem ini digunakan untuk mengelola penjualan dan pemasukan barang.',
+          },
+        ];
+
+        let carousel = '';
+
+        for (let index = 0; index < PROJECTS.length - 1; index++) {
+          carousel += `
+            <div class="carousel-item ${index === 0 ? 'active' : ''}">
+              <div class="row">`;
+          let indexJ = index;
+
+          for (let j = 0; j < 3; j++) {
+            const ELEMENT = PROJECTS[indexJ];
+            indexJ++;
+
+            if (ELEMENT) {
+              carousel += `
+                <div class="col-lg-4">
+                  <div class="pricing-item-${j === 1 ? 'pro' : 'regular'}">
+                    <h4>${ELEMENT.nama}</h4>
+                    <div class="icon">
+                      <img src="${ELEMENT.image}" alt="" style="width: 300px; height: 200px;" />
+                    </div>
+                    <div>${ELEMENT.deskripsi}</div>
+                    <div class="border-button">
+                      <a href="#">Purchase This Plan Now</a>
+                    </div>
+                  </div>
+                </div>`;
+            }
+          }
+
+          carousel += `
+            </div>
+          </div>`;
+        };
+
+        $('.carousel-inner').html(carousel);
+      });
+    </script>
   </body>
 </html>
